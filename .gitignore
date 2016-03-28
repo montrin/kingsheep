@@ -13,6 +13,8 @@ hs_err_pid*
 =======
 
 out/production/kingsheep/gfx
+=======
+out/production/kingsheep/gfx/
 *.xml
 *.png
 *.iml

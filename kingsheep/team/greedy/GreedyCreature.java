@@ -77,19 +77,20 @@ public abstract class GreedyCreature extends Creature {
 
             while (squareQueue.size() > 0){
                 Iterator<Square> iter = squareQueue.iterator();
+
                 while (iter.hasNext()){
                     Square square = iter.next();
-
                     Move successMove = square.processSquareInQueue();
+
                     if (successMove != null){
                         return successMove;
                     }
+
                 }
 
                 squareQueue = squareQueueToAdd;
                 squareQueueToAdd = new ArrayList<Square>();
             }
-
 
             return Move.WAIT;
         }

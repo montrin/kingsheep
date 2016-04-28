@@ -12,5 +12,9 @@ public class Sheep extends MTrinkCreature {
 
     protected void think(Type map[][]) {
         move =  doAction(map);
+
+        if(!anyFood(map)) {
+            move = runAwayOrTrap(map, Type.WOLF2);
+        }
     }
 }

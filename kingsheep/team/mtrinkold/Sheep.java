@@ -1,9 +1,9 @@
-package kingsheep.team.mtrink2;
+package kingsheep.team.mtrinkold;
 
 import kingsheep.Simulator;
 import kingsheep.Type;
 
-public class Sheep extends MTrink2Creature {
+public class Sheep extends MTrinkCreature {
 
     public Sheep(Type type, Simulator parent, int playerID, int x, int y) {
         super(type, parent, playerID, x, y);
@@ -12,9 +12,5 @@ public class Sheep extends MTrink2Creature {
 
     protected void think(Type map[][]) {
         move =  doAction(map);
-
-        if(!anyFood(map)) {
-            move = runAwayOrTrap(map, Type.WOLF2);
-        }
     }
 }
